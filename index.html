@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Sphere</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="flex justify-between items-center p-3
+        bg-gradient-to-r from-gray-800 to-gray-900 border-b border-gray-800 shadow-lg backdrop-blur-sm md:px-6">
+
+        <div class="logo flex">
+            <div class="size-8 mr-2">
+                <img src="images/shield.png" alt="logo icon">
+            </div>
+            <p class="text-white font-bold text-xl">Tech Sphere</p>
+        </div>
+
+        <div class="nav-mobile p-2 hover:bg-gray-200 *:w-4 *:h-0.5 *:bg-white space-y-1 md:hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav class="items-center hidden md:flex">
+            <ul class="desktop-nav flex space-x-4 *:text-gray-400 *:hover:text-white *:transition-colors pr-4 border-r border-r-gray-800">
+                <a href="index.html">
+                    <li>Home</li>
+                </a><a href="#">
+                    <li>About</li>
+                </a><a href="#">
+                    <li>Contact</li>
+                </a><a href="">
+                    <li>Blog</li>
+                </a>
+            </ul>
+
+            <a href="#">
+                <div class="flex items-center gap-2 *:text-white ml-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg rounded-lg group">
+                    <p>Get Started</p>
+                    <div class="group-hover:translate-x-1 transition-transform">&#8702;</div>
+                </div>
+            </a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="hero-section" class="bg-indigo-700">
+            <div id="left-section" class="*:text-white">
+                <h1 class="text-3xl">Creative <span>Digital Solution</span> for Modern Needs</h1>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
