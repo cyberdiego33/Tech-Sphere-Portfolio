@@ -18,7 +18,7 @@
             <p class="text-white font-bold text-xl">Tech Sphere</p>
         </div>
 
-        <div class="nav-mobile p-2 hover:bg-gray-200 *:w-4 *:h-0.5 *:bg-white space-y-1 md:hidden">
+        <div class="nav-mobile p-2 rounded-md hover:bg-gray-200 *:w-4 *:h-0.5 *:bg-white space-y-1 md:hidden">
             <div></div>
             <div></div>
             <div></div>
@@ -38,7 +38,7 @@
             </ul>
 
             <a href="#">
-                <div class="flex items-center gap-2 *:text-white ml-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg rounded-lg group">
+                <div class="flex items-center gap-2 font-semibold *:text-white ml-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg rounded-lg group">
                     <p>Get Started</p>
                     <div class="group-hover:translate-x-1 transition-transform">&#8702;</div>
                 </div>
@@ -48,10 +48,50 @@
     </header>
 
     <main>
-        <section id="hero-section" class="bg-indigo-700">
-            <div id="left-section" class="*:text-white">
-                <h1 class="text-3xl">Creative <span>Digital Solution</span> for Modern Needs</h1>
+
+        <section id="hero-section" class="relative bg-gradient-to-r
+        from-[#0f172a] via-[#312e81] to-[#0f172a]
+    ">
+
+            <div id="bottom-glow" class="absolute top-20 right-20 size-60 bg-blue-500 rounded-full blur-3xl animate-pulse duration-200 ease-in-out"></div>
+
+            <div class="absolute bottom-10 left-10 size-60 bg-purple-500 rounded-full blur-3xl animate-pulse duration-200 ease-in-out"></div>
+
+            <div class="absolute top-20 left-1/4 size-2 bg-blue-500 rounded-full animate-ping ease-in-out" style="animation-duration: 3s;"></div>
+
+            <div class="absolute top-40 right-20 size-2 bg-purple-500 rounded-full animate-ping ease-in-out" style="animation-duration: 3s;"></div>
+
+            <div class="absolute bottom-20 left-20 size-2 bg-blue-500 rounded-full animate-ping ease-in-out" style="animation-duration: 3s;"></div>
+
+            <div id="hero-conatiner" class="py-20 px-5 md:px-10 relative z-5">
+                <div id="left-section" class="*:text-white max-w-2xl pb-8 border-b border-b-gray-700">
+
+                    <h1 class="text-4xl sm:text-5xl font-bold">Creative <span class="text-blue-500">Digital Solution</span> for Modern Needs</h1>
+
+                    <p class="my-5 text-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta error ab id, dolorum nam cum corporis eaque labore numquam iure.
+                    </p>
+
+                    <div id="hero-buttons" class="space-x-4 sm:flex">
+                        <a href="#">
+                            <div class="flex items-center gap-2 *:text-white font-semibold w-fit px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg rounded-lg group">
+                                <p>Get Started Now</p>
+                                <div class="group-hover:translate-x-1 transition-transform">&#8702;</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex gap-2 px-8 py-2 bg-gray-800 border border-gray-700 hover:border-gray-600 shadow-lg rounded-lg font-semibold w-fit">
+                                <p>About Us</p>
+                                <span class="group-hover:translate-x-1 transition-transform">></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section>
+            
         </section>
     </main>
 </body>

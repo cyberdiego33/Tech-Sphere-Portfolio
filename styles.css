@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+
+#bottom-glow {
+    animation-delay: 1s;
+}
