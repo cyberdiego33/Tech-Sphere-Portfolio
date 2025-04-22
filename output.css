@@ -416,14 +416,23 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-\[24\] {
+    height: 24;
+  }
   .h-\[40\%\] {
     height: 40%;
   }
   .h-\[200px\] {
     height: 200px;
   }
+  .h-\[247px\] {
+    height: 247px;
+  }
   .h-\[300px\] {
     height: 300px;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-px {
     height: 1px;
@@ -505,6 +514,9 @@
   }
   .items-start {
     align-items: flex-start;
+  }
+  .items-stretch {
+    align-items: stretch;
   }
   .justify-between {
     justify-content: space-between;
