@@ -34,6 +34,37 @@
     src: url('fonts/poppins-v22-latin-800.woff2') format('woff2'); 
   }
 
+:root{
+  --width: 300px;
+  --height: 200px;
+  --quantity: 8;
+}
+
+.list-img {
+  min-width: calc( var(--width) * var(--quantity));
+}
+
+.slider-cont {
+  height: var(--height);
+}
+
+.item-img {
+  width: var(--width);
+  height: var(--height);
+  left: 100%;
+  animation: autorun 10s linear infinite;
+  animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1));
+}
+
+@keyframes autorun {
+  from{
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1)
+  }
+}
+
 #bottom-glow {
     animation-delay: 1s;
 }
