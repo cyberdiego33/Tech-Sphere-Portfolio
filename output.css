@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-cyan-600: oklch(60.9% 0.126 221.723);
@@ -640,9 +639,6 @@
   }
   .border-gray-800 {
     border-color: var(--color-gray-800);
-  }
-  .border-red-400 {
-    border-color: var(--color-red-400);
   }
   .border-r-gray-800 {
     border-right-color: var(--color-gray-800);
@@ -1470,6 +1466,68 @@ body {
 }
 .card-image {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+:root {
+  --width: 300px;
+  --height: 200px;
+  --quantity: 8;
+}
+.slider-cont {
+  width: 100%;
+  height: var(--height);
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+  mask-image: linear-gradient( to right, transparent, #000 10% 90%, transparent );
+}
+.slider-cont .list-cont {
+  display: flex;
+  width: 100%;
+  min-width: calc( var(--width) * var(--quantity));
+  position: relative;
+}
+.slider-cont .list-cont .items-cont {
+  --seconds: 10s;
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autorun var(--seconds) linear infinite;
+  transition: filter 0.5;
+  animation-delay: calc( (var(--seconds) / var(--quantity)) * (var(--position) - 1));
+}
+.slider-cont .list-cont .items-cont img {
+  width: 100%;
+  height: var(--height);
+  object-fit: cover;
+}
+.slider-cont:hover .items-cont, .slider-cont:active .items-cont {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+.slider-cont .items-cont:hover, .slider-cont .items-cont:hover {
+  filter: grayscale(0);
+}
+.slider-cont[reverse="true"] .items-cont {
+  --seconds: 15s;
+  animation: reversePlay var(--seconds) linear infinite;
+  animation-delay: calc( (var(--seconds) / var(--quantity)) * (var(--position) - 1));
+}
+@keyframes autorun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
